@@ -1,6 +1,3 @@
 {
-  "extends": ["next", "prettier"],
-  "rules": {
-    "react/no-unescaped-entities": "off"
-  }
+  "extends": ["next", "next/core-web-vitals"]
 }
