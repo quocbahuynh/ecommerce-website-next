@@ -10,6 +10,18 @@ html {
   scroll-behavior: smooth;
 }
 /* -- quantity box -- */
+image-container {
+  width: 100%;
+}
+image-container > div {
+  position: unset !important;
+}
+image-container .image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
 
 .quantity {
   display: inline-block; }

@@ -1,5 +1,6 @@
-
-
+import Image from "next/image";
+import whiteLogo from '../../public/assets/images/logo/white-logo.svg'
+import payment from '../../public/assets/images/footer/credit-cards-footer.png'
 export const Footer = () => {
   return (
     <footer className="footer">
@@ -10,11 +11,10 @@ export const Footer = () => {
             <div className="row">
               <div className="col-lg-3 col-md-4 col-12">
                 <div className="footer-logo">
-                  <a href="index.html">
-                    <img
-                      src="/assets/images/logo/white-logo.svg"
+                  <a>
+                    <Image
+                      src={whiteLogo}
                       alt="logo"
-
                     />
                   </a>
                 </div>
@@ -86,14 +86,14 @@ export const Footer = () => {
                   <h3>Our Mobile App</h3>
                   <ul className="app-btn">
                     <li>
-                      <a href="javascript:void(0)">
+                      <a>
                         <i className="lni lni-apple" />
                         <span className="small-title">Download on the</span>
                         <span className="big-title">App Store</span>
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">
+                      <a>
                         <i className="lni lni-play-store" />
                         <span className="small-title">Download on the</span>
                         <span className="big-title">Google Play</span>
@@ -109,19 +109,19 @@ export const Footer = () => {
                   <h3>Information</h3>
                   <ul>
                     <li>
-                      <a href="javascript:void(0)">About Us</a>
+                      <a>About Us</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Contact Us</a>
+                      <a>Contact Us</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Downloads</a>
+                      <a>Downloads</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Sitemap</a>
+                      <a>Sitemap</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">FAQs Page</a>
+                      <a>FAQs Page</a>
                     </li>
                   </ul>
                 </div>
@@ -133,23 +133,19 @@ export const Footer = () => {
                   <h3>Shop Departments</h3>
                   <ul>
                     <li>
-                      <a href="javascript:void(0)">
-                        Computers &amp; Accessories
-                      </a>
+                      <a>Computers &amp; Accessories</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Smartphones &amp; Tablets</a>
+                      <a>Smartphones &amp; Tablets</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">TV, Video &amp; Audio</a>
+                      <a>TV, Video &amp; Audio</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">
-                        Cameras, Photo &amp; Video
-                      </a>
+                      <a>Cameras, Photo &amp; Video</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Headphones</a>
+                      <a>Headphones</a>
                     </li>
                   </ul>
                 </div>
@@ -168,21 +164,19 @@ export const Footer = () => {
               <div className="col-lg-4 col-12">
                 <div className="payment-gateway">
                   <span>We Accept:</span>
-                  <img
-                    src="/assets/images/footer/credit-cards-footer.png"
-                    alt="#"
-                  />
+                  <div>
+                    <Image
+                      src={payment}
+                      alt="#"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="col-lg-4 col-12">
                 <div className="copyright">
                   <p>
                     Designed and Developed by
-                    <a
-                      href="https://graygrids.com/"
-                    >
-                      GrayGrids
-                    </a>
+                    <a href="https://graygrids.com/">GrayGrids</a>
                   </p>
                 </div>
               </div>
@@ -192,22 +186,22 @@ export const Footer = () => {
                     <span>Follow Us On:</span>
                   </li>
                   <li>
-                    <a href="javascript:void(0)">
+                    <a>
                       <i className="lni lni-facebook-filled" />
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:void(0)">
+                    <a>
                       <i className="lni lni-twitter-original" />
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:void(0)">
+                    <a>
                       <i className="lni lni-instagram" />
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:void(0)">
+                    <a>
                       <i className="lni lni-google" />
                     </a>
                   </li>

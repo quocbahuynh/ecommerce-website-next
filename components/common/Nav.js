@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { CartWapper } from "../cart/CartWapper";
 import { useSelector } from "react-redux";
+import Image from 'next/image'
+import logo from '../../public/assets/images/logo/logo.svg'
 
 export const Nav = () => {
   const cart = useSelector((state) => state.cart);
@@ -14,7 +16,7 @@ export const Nav = () => {
               {/* Start Header Logo */}
               <Link href="/">
                 <a className="navbar-brand">
-                  <img src="/assets/images/logo/logo.svg" alt="Logo" />
+                  <Image src={logo} alt="Logo" />
                 </a>
               </Link>
               {/* End Header Logo */}

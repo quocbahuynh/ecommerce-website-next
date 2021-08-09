@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { addCart } from "../../pages/features/cartSlice";
+import Image from 'next/image'
 
 export const ItemDetail = (props) => {
   const dispatch = useDispatch();
@@ -18,7 +19,6 @@ export const ItemDetail = (props) => {
     const action = addCart(data);
     dispatch(action);
   };
-
   return (
     <div className="top-area">
       <div className="row align-items-center">
@@ -26,10 +26,11 @@ export const ItemDetail = (props) => {
           <div className="product-images">
             <main id="gallery">
               <div className="main-img">
-               <img src={props.src} id="current" alt="#" />
+               <Image src={props.src} id="current" alt="#" layout='fill' />
               </div>
               <div className="images">
-               <img
+              {/*
+              <img
                   src="/assets/images/product-details/01.jpg"
                   className="img"
                   alt="#"
@@ -54,6 +55,7 @@ export const ItemDetail = (props) => {
                   className="img"
                   alt="#"
                 />
+              */}
               </div>
             </main>
           </div>

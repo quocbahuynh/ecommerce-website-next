@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { removeCart } from "../../pages/features/cartSlice";
+import Image from 'next/image'
 export const CartSingle = (props) => {
   const dispatch = useDispatch()
   console.log(props.slug);
@@ -20,7 +21,7 @@ export const CartSingle = (props) => {
       <div className="cart-img-head">
         <Link href={`/products/${encodeURIComponent(props.slug)}`}>
           <a className="cart-img">
-            <img src={props.src} alt={props.title}/>
+            <Image src={props.src} alt={props.title}/>
           </a>
         </Link>
       </div>
