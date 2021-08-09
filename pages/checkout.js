@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import Head from "next/head";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
-import Image from 'next/image'
 
 export default function Checkout() {
   const router = useRouter();
@@ -43,7 +42,7 @@ export default function Checkout() {
                   className="list-group-item d-flex justify-content-between lh-condensed"
                   key={index}
                 >
-                  <Image src={item.info.src} height={500} />
+                  <img src={item.info.src} height={50}/>
                   <div>
                     <h6 className="my-0">{item.info.title}</h6>
                     <small className="text-muted">

@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 export const Footer = () => {
   return (
@@ -11,9 +11,10 @@ export const Footer = () => {
               <div className="col-lg-3 col-md-4 col-12">
                 <div className="footer-logo">
                   <a href="index.html">
-                    <Image
+                    <img
                       src="/assets/images/logo/white-logo.svg"
                       alt="logo"
+
                     />
                   </a>
                 </div>
@@ -167,7 +168,7 @@ export const Footer = () => {
               <div className="col-lg-4 col-12">
                 <div className="payment-gateway">
                   <span>We Accept:</span>
-                  <Image
+                  <img
                     src="/assets/images/footer/credit-cards-footer.png"
                     alt="#"
                   />

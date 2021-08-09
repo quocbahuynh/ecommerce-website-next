@@ -9,7 +9,7 @@ export const ProductPreview = (props) => {
           {/* Start Single Product */}
           <div className="single-product">
             <div className="product-image">
-              <Image src={props.src} alt="#" />
+              <img src={props.src} alt="#" />
               <div className="button">
                 <Link href={`/products/${props.slug}`}>
                   <a className="btn">

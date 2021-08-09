@@ -2,10 +2,14 @@ import { Banner } from "../components/home/Banner";
 import { ProductsWapper } from "../components/home/ProductsWapper";
 import { ProductPreview } from "../components/products/ProductPreview";
 import { server } from "../config";
+import Head from 'next/head'
 
 export default function Home({ data }) {
   return (
     <>
+    <Head>
+      <title>Shop Grids</title>
+    </Head>
       <Banner />
       <ProductsWapper>
         {data.map((item, index) => (
