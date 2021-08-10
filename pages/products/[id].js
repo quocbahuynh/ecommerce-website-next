@@ -1,6 +1,6 @@
 import { ItemDetail } from "../../components/detail/ItemDetail";
 import { ItemReview } from "../../components/detail/ItemReview";
-import dataProducts from '../../lib/products.json'
+import dataProducts from '../../public/lib/products.json'
 import Head from 'next/head'
 
 export default function ProductSingle({ posts }) {

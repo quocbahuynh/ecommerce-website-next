@@ -1,7 +1,7 @@
 import { Banner } from "../components/home/Banner";
 import { ProductsWapper } from "../components/home/ProductsWapper";
 import { ProductPreview } from "../components/products/ProductPreview";
-import dataProducts from "../lib/products.json";
+import dataProducts from "../public/lib/products.json";
 import Head from "next/head";
 
 export default function Home({ data }) {
