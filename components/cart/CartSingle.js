@@ -21,7 +21,7 @@ export const CartSingle = (props) => {
       <div className="cart-img-head">
         <Link href={`/products/${encodeURIComponent(props.slug)}`}>
           <a className="cart-img">
-            <Image src={props.src} alt={props.title}/>
+            <Image src={props.src} alt={props.title} height={40} width={40} layout="responsive" />
           </a>
         </Link>
       </div>

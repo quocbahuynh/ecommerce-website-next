@@ -1,15 +1,15 @@
 import { Banner } from "../components/home/Banner";
 import { ProductsWapper } from "../components/home/ProductsWapper";
 import { ProductPreview } from "../components/products/ProductPreview";
-import { server } from "../config";
-import Head from 'next/head'
+import dataProducts from "../lib/products.json";
+import Head from "next/head";
 
 export default function Home({ data }) {
   return (
     <>
-    <Head>
-      <title>Shop Grids</title>
-    </Head>
+      <Head>
+        <title>Shop Grids</title>
+      </Head>
       <Banner />
       <ProductsWapper>
         {data.map((item, index) => (
@@ -42,9 +42,7 @@ export default function Home({ data }) {
                     <br /> features and commercial license.
                   </p>
                   <div className="button wow fadeInUp" data-wow-delay=".8s">
-                    <a href="javascript:void(0)" className="btn">
-                      Purchase Now
-                    </a>
+                    <a className="btn">Purchase Now</a>
                   </div>
                 </div>
               </div>
@@ -157,8 +155,7 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}/api/products/all`);
-  const data = await res.json();
+  const data = await dataProducts;
 
   if (!data) {
     return {

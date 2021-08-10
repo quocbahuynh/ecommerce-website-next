@@ -1,6 +1,6 @@
 import { ItemDetail } from "../../components/detail/ItemDetail";
 import { ItemReview } from "../../components/detail/ItemReview";
-import { server } from "../../config";
+import dataProducts from '../../lib/products.json'
 import Head from 'next/head'
 
 export default function ProductSingle({ posts }) {
@@ -47,9 +47,9 @@ export default function ProductSingle({ posts }) {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(`${server}/api/products/${params.id}`);
-  const posts = await res.json();
-
+  const res = await dataProducts;
+  const item = res.filter((item) => item.slug ===  params.id)
+  const posts = item[0];
   return {
     props: {
       posts,
@@ -59,9 +59,8 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(`${server}/api/products/all`);
-  const posts = await res.json();
-  const paths = posts.map((post) => ({
+  const res = await dataProducts;
+  const paths = res.map((post) => ({
     params: { id: post.slug },
   }));
   return { paths, fallback: "blocking" };
