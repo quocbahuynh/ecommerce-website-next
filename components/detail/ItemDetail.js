@@ -26,7 +26,7 @@ export const ItemDetail = (props) => {
           <div className="product-images">
             <main id="gallery">
               <div className="main-img">
-               <Image src={props.src} id="current" alt="#" layout='fill' />
+               <Image src={props.src} id="current" alt="#"  width={5000} height={4500} layout="responsive"/>
               </div>
               <div className="images">
               {/*

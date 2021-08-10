@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const ProductPreview = (props) => {
   return (
@@ -7,8 +8,27 @@ export const ProductPreview = (props) => {
         <a>
           {/* Start Single Product */}
           <div className="single-product">
-            <div className="product-image">
-              <img src={props.src} alt="#" />
+            <div
+              className="product-image"
+              style={{
+                position: "relative",
+                width: "300px",
+                height: "300px",
+                maxHeight: "300px",
+                maxWidth: "300px",
+              }}
+            >
+              <Image
+                src={props.src}
+                alt="#"
+                layout="fill"
+                style={{
+                  width: "200px",
+                  height: "200px",
+                  maxHeight: "200px",
+                  maxWidth: "200px",
+                }}
+              />
               <div className="button">
                 <Link href={`/products/${props.slug}`}>
                   <a className="btn">
@@ -20,7 +40,9 @@ export const ProductPreview = (props) => {
             <div className="product-info">
               <span className="category">{props.category}</span>
               <h4 className="title">
-                <a href="product-grids.html">{props.title}</a>
+                <Link href={`/products/${props.slug}`}>
+                  <a href="product-grids.html">{props.title}</a>
+                </Link>
               </h4>
               <ul className="review">
                 <li>

@@ -10,18 +10,6 @@ html {
   scroll-behavior: smooth;
 }
 /* -- quantity box -- */
-image-container {
-  width: 100%;
-}
-image-container > div {
-  position: unset !important;
-}
-image-container .image {
-  object-fit: contain;
-  width: 100% !important;
-  position: relative !important;
-  height: unset !important;
-}
 
 .quantity {
   display: inline-block; }
@@ -3602,7 +3590,7 @@ ol {
   border-radius: 4px;
 }
 
-.item-details .product-images img {
+.item-details .product-images .img-pro {
   width: 100%;
   cursor: pointer;
   border-radius: 4px;
