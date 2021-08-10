@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Nav } from "../components/common/Nav";
 import { Footer } from "../components/common/Footer";
-import { persistor, store } from "./app/store";
+import { persistor, store } from "../app/store";
 import { Provider } from "react-redux";
 import { PersistGate } from 'redux-persist/integration/react'
 import Script from 'next/script'

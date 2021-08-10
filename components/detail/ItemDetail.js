@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { addCart } from "../../pages/features/cartSlice";
+import { addCart } from "../../features/cartSlice";
 import Image from 'next/image'
 
 export const ItemDetail = (props) => {

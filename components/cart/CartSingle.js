@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useDispatch } from "react-redux";
-import { removeCart } from "../../pages/features/cartSlice";
+import { removeCart } from "../../features/cartSlice";
 import Image from 'next/image'
 export const CartSingle = (props) => {
   const dispatch = useDispatch()
